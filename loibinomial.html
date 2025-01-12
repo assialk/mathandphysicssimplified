@@ -220,9 +220,41 @@
                     </section>
 
                     <section class="concepts">
-                        <h2>Succession de </h2>
+                        <h2>Définition de la Loi Binomiale</h2>
+                        <p>La loi binomiale est une loi de probabilité discrète qui modélise le nombre de succès dans une série de \( n \) essais indépendants, chacun ayant une probabilité de succès \( p \).</p>
+                        <p>Une variable aléatoire \( X \) suit une loi binomiale de paramètres \( n \) et \( p \), notée \( X \sim \mathcal{B}(n, p) \), si :</p>
+                        <p>\[
+                            P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}
+                        \]</p>
+                        <p>où \( k \) est le nombre de succès (0 ≤ \( k \) ≤ \( n \)), et \( \binom{n}{k} \) est le coefficient binomial donné par :</p>
+                        <p>\[
+                            \binom{n}{k} = \frac{n!}{k!(n-k)!}
+                        \]</p>
                     </section>
-
+        
+                    <section class="concepts">
+                        <h2>Espérance et Variance</h2>
+                        <ul>
+                            <li><span>Espérance (Moyenne)</span> : L'espérance \( E(X) \) d'une variable aléatoire suivant une loi binomiale est donnée par :</li>
+                            <p>\[
+                                E(X) = n \cdot p
+                            \]</p>
+                            <li><span>Variance</span> : La variance \( V(X) \) est donnée par :</li>
+                            <p>\[
+                                V(X) = n \cdot p \cdot (1 - p)
+                            \]</p>
+                        </ul>
+                    </section>
+        
+                    <section class="example">
+                        <h2>Exemple d'Application</h2>
+                        <p>Supposons qu'une pièce de monnaie est lancée 10 fois. La probabilité d'obtenir un "pile" à chaque lancer est de 0,5. Si on note \( X \) le nombre de "pile" obtenus, alors \( X \) suit une loi binomiale \( \mathcal{B}(10, 0.5) \).</p>
+                        <p>La probabilité d'obtenir exactement 6 "pile" est :</p>
+                        <p>\[
+                            P(X = 6) = \binom{10}{6} (0.5)^6 (0.5)^4 = 210 \cdot (0.5)^{10} = 0.205
+                        \]</p>
+                    </section>
+                    
                 </main>
 
                 <footer>
