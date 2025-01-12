@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinatoire et Dénombrement - Mathématiques Spécialité Terminale</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            color: rgb(63, 39, 39);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h2, h3 {
+            color: #8b1152;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            color: #5b3e52;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .concepts, .example {
+            background-color: #aa7788;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .concepts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .concepts li {
+            margin-bottom: 15px;
+        }
+
+        .concepts li span {
+            color: #874b79;
+            font-weight: bold;
+        }
+
+        .example p {
+            font-size: 18px;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .image-container {
+            background-color: #3c2b34;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #9abcab;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ff00c8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>Combinatoire et Dénombrement - Mathématiques Spécialité Terminale</h1>
+        </header>
+
+        <main>
+            <section class="concepts">
+                <h2>Concepts clés</h2>
+                <ul>
+                    <li><span>Principes de base :</span> Règles de multiplication et d'addition pour compter les différentes possibilités dans des situations complexes.</li>
+                    <li><span>Factorielles :</span> La factorielle n! représente le produit de tous les entiers de 1 à n. Exemple : 4! = 4 × 3 × 2 × 1 = 24.</li>
+                    <li><span>Arrangements :</span> Les arrangements sont utilisés pour compter le nombre de façons de choisir et d'ordonner des objets dans un ensemble. La formule est : A(n, k) = n! / (n-k)!.</li>
+                    <li><span>Combinaisons :</span> Les combinaisons sont utilisées pour compter le nombre de façons de choisir des objets sans ordre particulier. La formule est : C(n, k) = n! / (k!(n-k)!).</li>
+                    <li><span>Permutations :</span> Les permutations sont des arrangements où tous les éléments sont pris en compte. Exemple : Permutation de 3 éléments : P(3) = 3! = 6.</li>
+                    <li><span>Principe des tiroirs :</span> Si on place plus d'objets que de tiroirs, au moins un tiroir contiendra plus d'un objet.</li>
+                </ul>
+            </section>
+
+            <!-- EXEMPLES D'ARRANGEMENTS -->
+            <section class="example">
+                <h3>Exemple 1 : Arrangements</h3>
+                <p>On souhaite former des codes à 3 chiffres distincts en utilisant les chiffres 1, 2, 3, 4 et 5. Combien de codes différents peut-on obtenir ?</p>
+                <pre>
+A(5, 3) = 5! / (5-3)!
+        = 5! / 2!
+        = (5 × 4 × 3) / 1
+        = 60
+                </pre>
+                <p>On peut donc former 60 codes différents.</p>
+            </section>
+
+            <!-- EXEMPLES DE COMBINAISONS -->
+            <section class="example">
+                <h3>Exemple 2 : Combinaisons</h3>
+                <p>Combien de façons peut-on choisir 4 élèves parmi 10 pour former un groupe ?</p>
+                <pre>
+C(10, 4) = 10! / (4! × (10-4)!)
+         = 10! / (4! × 6!)
+         = (10 × 9 × 8 × 7) / (4 × 3 × 2 × 1)
+         = 210
+                </pre>
+                <p>Il existe donc 210 façons de choisir 4 élèves parmi 10.</p>
+            </section>
+
+            <!-- EXEMPLES DE PERMUTATIONS -->
+            <section class="example">
+                <h3>Exemple 3 : Permutations</h3>
+                <p>Combien de façons peut-on organiser les lettres du mot "CHIEN" ?</p>
+                <pre>
+P(5) = 5!
+    = 5 × 4 × 3 × 2 × 1
+    = 120
+                </pre>
+                <p>On peut donc former 120 permutations des lettres du mot "CHIEN".</p>
+            </section>
+
+            <!-- EXEMPLE D'APPLICATION GÉNÉRALE -->
+            <section class="example">
+                <h3>Exemple 4 : Application pratique</h3>
+                <p>Un club de sport organise un tournoi où 8 joueurs s'affrontent. Les 3 premiers recevront une médaille d'or, d'argent et de bronze, selon leur classement. Combien de classements possibles peut-on obtenir ?</p>
+                <pre>
+A(8, 3) = 8! / (8-3)!
+        = 8! / 5!
+        = (8 × 7 × 6)
+        = 336
+                </pre>
+                <p>Il existe 336 façons de distribuer les médailles d'or, d'argent et de bronze parmi les 8 joueurs.</p>
+            </section>
+
+            <!-- EXEMPLE FINAL DE RÉVISION -->
+            <section class="example">
+                <h3>Exemple 5 : Cas mixte</h3>
+                <p>On a un sac de 12 billes, dont 7 rouges et 5 bleues. Combien de façons de tirer 3 billes rouges et 2 billes bleues ?</p>
+                <pre>
+Nombre de façons de tirer 3 billes rouges parmi 7 :
+C(7, 3) = 7! / (3! × 4!) 
+       = (7 × 6 × 5) / (3 × 2 × 1) 
+       = 35
+
+Nombre de façons de tirer 2 billes bleues parmi 5 :
+C(5, 2) = 5! / (2! × 3!) 
+       = (5 × 4) / (2 × 1) 
+       = 10
+
+Combinaison totale :
+Total = C(7, 3) × C(5, 2) 
+      = 35 × 10 
+      = 350
+                </pre>
+                <p>Il existe donc 350 façons de tirer 3 billes rouges et 2 billes bleues.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Ce cours a été créé pour les étudiants de terminale en spécialité mathématiques.</p>
+            <p>Retour au <a href="index.html">site principal</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>

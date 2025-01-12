@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limites de Fonctions - Mathématiques Spécialité Terminale</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            color: rgb(63, 39, 39);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h2, h3 {
+            color: #8b1152;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            color: #5b3e52;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .concepts, .example {
+            background-color: #aa7788;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .concepts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .concepts li {
+            margin-bottom: 15px;
+        }
+
+        .concepts li span {
+            color: #874b79;
+            font-weight: bold;
+        }
+
+        .example p {
+            font-size: 18px;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .image-container {
+            background-color: #3c2b34;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #9abcab;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ff00c8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>Limites de Fonctions - Mathématiques Spécialité Terminale</h1>
+        </header>
+
+        <main>
+            <!-- SECTION 1 : CONCEPTS CLÉS -->
+            <section class="concepts">
+                <h2>Concepts Clés</h2>
+                <ul>
+                    <li><span>Limite finie en un point :</span> On dit que \( f(x) \) tend vers \( L \) en \( a \) si, lorsque \( x \) se rapproche de \( a \), \( f(x) \) se rapproche de \( L \). Noté : 
+                        \[
+                        \lim_{x \to a} f(x) = L
+                        \]
+                    </li>
+                    <li><span>Limite infinie en un point :</span> On dit que \( f(x) \) tend vers \( +\infty \) ou \( -\infty \) en \( a \) si, lorsque \( x \) se rapproche de \( a \), les valeurs de \( f(x) \) deviennent arbitrairement grandes (en positif ou négatif).
+                        \[
+                        \lim_{x \to a} f(x) = \pm \infty
+                        \]
+                    </li>
+                    <li><span>Limites à l'infini :</span> On étudie le comportement de \( f(x) \) lorsque \( x \) tend vers \( +\infty \) ou \( -\infty \). On note :
+                        \[
+                        \lim_{x \to +\infty} f(x) = L
+                        \]
+                    </li>
+                    <li><span>Opérations sur les limites :</span> Les règles de calcul suivantes sont utilisées : 
+                        - La somme, le produit et le quotient des limites suivent des règles classiques.
+                        - Les formes indéterminées doivent être résolues par des manipulations algébriques.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- EXEMPLE 1 -->
+            <section class="example">
+                <h3>Exemple 1 : Limite finie en un point</h3>
+                <p>Calculer la limite de \( f(x) = \frac{x^2 - 1}{x - 1} \) lorsque \( x \) tend vers 1.</p>
+                <pre>
+f(x) = (x² - 1) / (x - 1)
+     = ((x - 1)(x + 1)) / (x - 1)
+
+On simplifie :
+f(x) = x + 1 (pour x ≠ 1)
+
+La limite est donc :
+lim(x → 1) f(x) = 1 + 1 = 2
+                </pre>
+                <p>La limite est 2, et la courbe est continue et sans discontinuité à \( x = 1 \).</p>
+                <p><strong>Comportement de la courbe :</strong> La fonction est définie et continue en \( x = 1 \), et la courbe se rapproche de 2 lorsque \( x \) tend vers 1.</p>
+            </section>
+
+            <!-- EXEMPLE 2 -->
+            <section class="example">
+                <h3>Exemple 2 : Limite infinie</h3>
+                <p>Calculer la limite de \( f(x) = \frac{1}{x - 2} \) lorsque \( x \) tend vers 2.</p>
+                <pre>
+Lorsque x → 2, le dénominateur x - 2 tend vers 0.
+
+Si x < 2, alors x - 2 est négatif, donc f(x) → -∞.
+Si x > 2, alors x - 2 est positif, donc f(x) → +∞.
+
+On a donc :
+lim(x → 2⁻) f(x) = -∞
+lim(x → 2⁺) f(x) = +∞
+                </pre>
+                <p><strong>Comportement de la courbe :</strong> La fonction admet une asymptote verticale en \( x = 2 \), et la courbe tend vers \( -\infty \) à gauche de \( x = 2 \) et vers \( +\infty \) à droite de \( x = 2 \).</p>
+            </section>
+
+            <!-- EXEMPLE 3 -->
+            <section class="example">
+                <h3>Exemple 3 : Limite à l'infini</h3>
+                <p>Calculer la limite de \( f(x) = \frac{3x^2 + 5}{2x^2 - 7} \) lorsque \( x \) tend vers \( +\infty \).</p>
+                <pre>
+On divise le numérateur et le dénominateur par x² :
+f(x) = (3 + 5/x²) / (2 - 7/x²)
+
+Lorsque x → +∞, 5/x² et -7/x² tendent vers 0, donc :
+lim(x → +∞) f(x) = 3 / 2
+                </pre>
+                <p><strong>Comportement de la courbe :</strong> La courbe admet une asymptote horizontale à \( y = \frac{3}{2} \). À mesure que \( x \) devient très grand, la fonction se rapproche de cette valeur sans jamais la dépasser.</p>
+            </section>
+
+            <!-- EXEMPLE 4 -->
+            <section class="example">
+                <h3>Exemple 4 : Forme indéterminée</h3>
+                <p>Calculer la limite de \( f(x) = \frac{\sin(x)}{x} \) lorsque \( x \) tend vers \( +\infty \).</p>
+                <pre>
+On sait que -1 ≤ sin(x) ≤ 1, donc :
+-1 / x ≤ (sin(x)) / x ≤ 1 / x
+
+Lorsque x → +∞, -1 / x et 1 / x tendent vers 0.
+
+Par le théorème des gendarmes :
+lim(x → +∞) (sin(x)) / x = 0
+                </pre>
+                <p><strong>Comportement de la courbe :</strong> La fonction se rapproche de 0 à mesure que \( x \) devient très grand, avec des oscillations de plus en plus petites autour de l'axe \( x \)-\( O \) à l'infini.</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Ce cours a été créé pour les étudiants de terminale en spécialité mathématiques.</p>
+            <p>Retour au <a href="index.html">site principal</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        MathJax.typeset();
+    </script>
+</body>
+</html>

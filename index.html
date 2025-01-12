@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths and Physics Simplified</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background-color: #96768e;
+            color: #800000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            background-color: #ffb6c1;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #d87093;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .geometric-pattern {
+            width: 50%;
+            height: 400px;
+            background-color: transparent;
+        }
+
+        .buttons {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #db7093;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff0f5;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .modal-content h2 {
+            color: #ff1493;
+        }
+
+        .modal-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .modal-content li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #ff1493;
+        }
+
+        .modal-content li:hover {
+            color: #db7093;
+        }
+
+        #themeToggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            .geometric-pattern, .buttons {
+                width: 100%;
+            }
+
+            .geometric-pattern {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>MATHS AND PHYSICS SIMPLIFIED</h1>
+        </header>
+        <main>
+            <svg class="geometric-pattern" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="circleGradient" cx="0.5" cy="0.5" r="0.5">
+                        <stop offset="99%" stop-color="#ff69b4"/>
+                        <stop offset="100%" stop-color="#ffe4e1"/>
+                    </radialGradient>
+                </defs>
+                
+                <circle cx="200" cy="200" r="150" stroke="url(#circleGradient)" stroke-width="2"/>
+                <circle cx="200" cy="200" r="120" stroke="url(#circleGradient)" stroke-width="2"/>
+                <circle cx="200" cy="200" r="90" stroke="url(#circleGradient)" stroke-width="2"/>
+                <circle cx="200" cy="200" r="60" stroke="url(#circleGradient)" stroke-width="2"/>
+                <circle cx="200" cy="200" r="30" stroke="url(#circleGradient)" stroke-width="2"/>
+                <rect x="140" y="140" width="120" height="120" stroke="url(#circleGradient)" stroke-width="2"/>
+                <rect x="160" y="160" width="80" height="80" stroke="url(#circleGradient)" stroke-width="2"/>
+                <rect x="180" y="180" width="40" height="40" stroke="url(#circleGradient)" stroke-width="2"/>
+                <polygon points="200,50 170,130 230,130" stroke="url(#circleGradient)" fill="none" stroke-width="2"/>
+                <polygon points="200,350 170,270 230,270" stroke="url(#circleGradient)" fill="none" stroke-width="2"/>
+                <polygon points="50,200 130,170 130,230" stroke="url(#circleGradient)" fill="none" stroke-width="2"/>
+                <polygon points="350,200 270,170 270,230" stroke="url(#circleGradient)" fill="none" stroke-width="2"/>
+                <line x1="200" y1="50" x2="200" y2="200" stroke="#ff69b4" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <line x1="200" y1="350" x2="200" y2="200" stroke="#ff69b4" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <line x1="50" y1="200" x2="200" y2="200" stroke="#ff69b4" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <line x1="350" y1="200" x2="200" y2="200" stroke="#ff69b4" stroke-width="1.5" stroke-dasharray="5,5"/>
+            </svg>
+            
+            <div class="buttons">
+                <button id="mathsBtn">Chapitres de maths</button>
+                <button id="mathsExpertesBtn">Chapitres de Maths Expertes</button>
+                <button id="physicsBtn">Chapitres de physique</button>
+            </div>
+        </main>
+    </div>
+
+    <button id="themeToggle">Changer le thème</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mathsBtn = document.getElementById('mathsBtn');
+            const mathsExpertesBtn = document.getElementById('mathsExpertesBtn');
+            const physicsBtn = document.getElementById('physicsBtn');
+            const themeToggle = document.getElementById('themeToggle');
+
+            mathsBtn.addEventListener('click', () => {
+                showChapters('Maths');
+            });
+
+            mathsExpertesBtn.addEventListener('click', () => {
+                showChapters('Maths Expertes');
+            });
+
+            physicsBtn.addEventListener('click', () => {
+                showChapters('Physics');
+            });
+
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                if (document.body.classList.contains('dark-theme')) {
+                    document.body.style.backgroundColor = '#2c2c2c';
+                    document.body.style.color = '#ffffff';
+                } else {
+                    document.body.style.backgroundColor = '#96768e';
+                    document.body.style.color = '#800000';
+                }
+            });
+
+            function showChapters(subject) {
+                const chapters = subject === 'Maths' 
+                    ? ['Combinatoire et dénombrement','Suites numériques','Vecteurs, droites et plans dans l’espace','Limites de fonctions','Continuité','Complément de dérivation','Logarithme népérien','Loi binomiale','Orthogonalité et distances dans l’espace','Fonctions trigonométriques','Primitives et équations différentielles','Calcul intégral','Sommes de variables aléatoires','Loi des grands nombres','Python et algorithmes','Relation des ensembles et logique']
+                    : subject === 'Maths Expertes'
+                    ? ['Arithmétique','Nombres complexes','Matrices et graphes']
+                    : ['Transformations acido-basiques et pH','Phénomène ondulatoire','Méthode d’analyse physique','Former des images','Suivi d’un titrage','Circuits électriques capacitifs','Evolution temporelle d’un système chimique','Evolution spontanée d’un système chimique','Force des acides et des bases','Transformations chimiques forcées','Ecoulement d’un fluide','Gaz parfaits et thermodynamique','Transferts thermiques','Cinématique et lois de Newton','Mouvement dans un champ uniforme','Mouvement dans un champ de gravitation','Transformations nucléaires','Structure en chimie organique','Stratégie de synthèse','Effet photoélectrique'];
+
+                const chapterLinks = {
+                    "Combinatoire et dénombrement": "maths1.html",
+                    "Suites numériques": "maths2.html",
+                    "Limites de fonctions": "limitefonction.html",
+                    "Matrices et graphes": "matrices.html",
+                    "Nombres complexes": "nbcomplexes.html",
+                    "Arithmétique": "arithmetique.html",
+                    "Mouvement dans un champ uniforme": "mvtchampuniforme.html",
+                    "Vecteurs, droites et plans dans l’espace" : "geometrie.html",
+                    "Continuité" : "continuite.html",
+                    "Complément de dérivation" : "complementderivation.html",
+                    "Loi binomiale" : "loibinomial.html",
+                    // Add links for the other chapters
+                };
+
+                const chapterList = chapters.map(chapter => `
+                    <li onclick="window.location.href='${chapterLinks[chapter] || '#'}'">${chapter}</li>
+                `).join('');
+                
+                const modal = document.createElement('div');
+                modal.className = 'modal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <h2>${subject} Chapters</h2>
+                        <ul>${chapterList}</ul>
+                        <button onclick="this.closest('.modal').remove()">Fermer</button>
+                    </div>
+                `;
+
+                document.body.appendChild(modal);
+            }
+        });
+    </script>
+</body>
+</html>

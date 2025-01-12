@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Nombres Complexes - Partie Algébrique</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            color: rgb(63, 39, 39);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h2, h3 {
+            color: #8b1152;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            color: #5b3e52;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .concepts, .example {
+            background-color: #aa7788;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .concepts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .concepts li {
+            margin-bottom: 15px;
+        }
+
+        .concepts li span {
+            color: #874b79;
+            font-weight: bold;
+        }
+
+        .example p {
+            font-size: 18px;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .image-container {
+            background-color: #3c2b34;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #9abcab;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ff00c8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>Les Nombres Complexes - Partie Algébrique</h1>
+        </header>
+
+        <main>
+            <!-- SECTION 1 : CONCEPTS CLÉS -->
+            <section class="concepts">
+                <h2>Concepts Clés</h2>
+                <ul>
+                    <li><span>Définition d'un nombre complexe :</span> Un nombre complexe \( z \) est un nombre de la forme :
+                        \[
+                        z = a + ib
+                        \]
+                        où \( a \) et \( b \) sont des réels, et \( i \) est l'unité imaginaire, vérifiant \( i^2 = -1 \).
+                    </li>
+
+                    <li><span>Partie réelle et partie imaginaire :</span> Pour \( z = a + ib \), la partie réelle est \( \Re(z) = a \) et la partie imaginaire est \( \Im(z) = b \).
+                    </li>
+
+                    <li><span>Addition et soustraction :</span> Soient \( z_1 = a + ib \) et \( z_2 = c + id \), alors :
+                        \[
+                        z_1 + z_2 = (a + c) + i(b + d), \quad z_1 - z_2 = (a - c) + i(b - d)
+                        \]
+                    </li>
+
+                    <li><span>Multiplication de nombres complexes :</span> Soient \( z_1 = a + ib \) et \( z_2 = c + id \), alors :
+                        \[
+                        z_1 \cdot z_2 = (a + ib)(c + id) = ac + iad + ibc + i^2bd = (ac - bd) + i(ad + bc)
+                        \]
+                    </li>
+
+                    <li><span>Conjugué d'un nombre complexe :</span> Le conjugué d'un nombre complexe \( z = a + ib \) est :
+                        \[
+                        \overline{z} = a - ib
+                        \]
+                        Il vérifie la relation \( z \cdot \overline{z} = a^2 + b^2 \).
+                    </li>
+                </ul>
+            </section>
+
+
+            <!-- EXEMPLE 1 -->
+            <section class="example">
+                <h3>Exemple 1 : Addition de deux nombres complexes</h3>
+                <p>Soit \( z_1 = 3 + 2i \) et \( z_2 = 1 - 4i \). Calculons la somme \( z_1 + z_2 \) :
+                    \[
+                    z_1 + z_2 = (3 + 2i) + (1 - 4i) = (3 + 1) + i(2 - 4)
+                    \]
+                    \[
+                    z_1 + z_2 = 4 - 2i
+                    \]
+                </p>
+                <p><strong>Résultat :</strong> La somme de \( z_1 \) et \( z_2 \) est \( 4 - 2i \).</p>
+            </section>
+
+            <!-- EXEMPLE 2 -->
+            <section class="example">
+                <h3>Exemple 2 : Multiplication de deux nombres complexes</h3>
+                <p>Soit \( z_1 = 2 + 3i \) et \( z_2 = 1 + 4i \). Calculons le produit \( z_1 \cdot z_2 \) :
+                    \[
+                    z_1 \cdot z_2 = (2 + 3i)(1 + 4i)
+                    \]
+                    \[
+                    z_1 \cdot z_2 = 2 \cdot 1 + 2 \cdot 4i + 3i \cdot 1 + 3i \cdot 4i
+                    \]
+                    \[
+                    z_1 \cdot z_2 = 2 + 8i + 3i - 12
+                    \]
+                    \[
+                    z_1 \cdot z_2 = -10 + 11i
+                    \]
+                </p>
+                <p><strong>Résultat :</strong> Le produit de \( z_1 \) et \( z_2 \) est \( -10 + 11i \).</p>
+            </section>
+
+            <!-- EXEMPLE 3 -->
+            <section class="example">
+                <h3>Exemple 3 : Conjugué d'un nombre complexe</h3>
+                <p>Soit \( z = 5 - 7i \). Le conjugué de \( z \) est :
+                    \[
+                    \overline{z} = 5 + 7i
+                    \]
+                </p>
+                <p><strong>Résultat :</strong> Le conjugué de \( z \) est \( 5 + 7i \).</p>
+            </section>
+
+            <section class="example">
+                <h3> Cours : Ensemble de points</h3>
+                <h4>Introduction: </h4>
+                <p>Imaginons que tu joues à un jeu de chasse au trésor sur une carte. Sur cette carte, tu as deux types de directions: la "gauche-droite" (qu'on appelle l'axe des x) et le "haut-bas" (qu'on l'axe des y). Chaque position sur cette carte peut être repérée par deux chiffres (les coordonées): par exemple (3,2) signifie "avance de 3 pas vers la droite et de 2 pas vers le haut"</p>
+                <br>
+                <p>Les nombres complexex fonctionnent de la même manière, sauf qu'au lieu d'utiliser des points sur une carte, on utilise un plan qu'on appelle le plan d'Argand. Un nombre complexe est comme un "point magique" qui a deux parties: <ul>
+                    <li>Une partie réelle (comme la gauche-droite sur la carte)</li>
+                    <li>Une partie imaginaire (comme le haut-bas sur la carte)</li>
+                    </ul> </p>
+                <p> Par exemple, le nombre complexe z = 3 + 2i correspond au point (3;2) sur notre carte. Le 3 est la partie réelle et le 2i est la partie est la partie imaginaire (on remplace le "haut-bas" par le "i", la fameuse unité imaginaire).
+                </p>
+                <h4>Comment déplacer un point (ou un nombre complexe)? :</h4> 
+                    <p> Imagine que tu es un pirate qui doit bouger un coffre au trésor sur la carte.
+                    <ul>
+                        <li>Si on te dit : "Ajoute 2 au x", tu avances de 2 pas à droite.</li>
+                        <li>Si on te dit: "Ajoute 3 au y", tu montes de 3 vers le haut.</li>
+                    </ul>
+
+                    Pour les nombres complexes, c'est pareil! Si on a z = 1 + i et qu'on ajoute 2 + 3i, on fait: 
+                    <ul>
+                        <li>Parite réelle: 1 + 2 = 3 </li>
+                        <li>Partie imaginaire: 1 + 3 = 4. Donc z + (2 + 3i) = 3 + 4i</li>
+                    </ul>
+                </p>
+                <h4>Les ensembles de points - Là où ça devient amusant !</h4>
+                <p>Les ensembles de points sont comme des "grandes équipes de points". Ces points peuvent former des lignes, des cercles, ou même des formes plus étranges. Voici quelques ensembles que tu pourrais rencontrer : </p>
+                <p><strong> 1. Les droites</strong> </p>
+                <p>Si on te dit que tous les points z vérifient l'équation Re(z) = 3, cela signifie que la partie réelle de tous les points est toujours 3. Sur notre carte, ça veut dire que tous les points se trouvent sur une "ligne verticale" a x = 3.
+                De la même manière, si on te dit que Im(z) = 2, alors tous les points ont une partie imaginaire égale à 2. Cette fois, ça correspond à une "ligne horizontale" à y = 2. </p>
+                <p><strong> 2. Les cercles</strong> </p>
+                <p> Imaginons maintenant que tu veux que tous les points soient à la même distance d'un point donné. Par exemple, tu veux que tous les points soient à 5 unités du point (0,0). Dans le langage des complexes, on écrit : |z| = 5 (la "distance" d'un point z à l'origine doit être égale à 5). Ce genre d'ensemble forme un cercle !</p>
+            </section>
+
+            <section class="example">
+                <h3>Correction des Exercices</h3>
+                <div class="images-grid">
+                    <div class="image-container">
+                        <img src="correctionmathsexp/exo 141.jpeg" alt="Correction de l'exercice 1">
+                        <p>Enoncé exo 141 p44</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="correctionmathsexp/1.jpeg" alt="Correction de l'exercice 2">
+                        <p>Correction de l'exercice 141 </p>
+                    </div>
+                    <div class="image-container">
+                        <img src="correctionmathsexp/2.jpeg" alt="Correction de l'exercice 3">
+                        <p>Correction 141 suite</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="correctionmathsexp/exo 140.jpeg" alt="Correction de l'exercice 3">
+                        <p>Correction de l'exercice 140 </p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer>
+            <p>Ce cours a été créé pour les étudiants de terminale en spécialité mathématiques.</p>
+            <p>Retour au <a href="index.html">site principal</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        MathJax.typeset();
+    </script>
+</body>
+</html>

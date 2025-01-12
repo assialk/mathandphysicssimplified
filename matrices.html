@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Matrices - Mathématiques Spécialité Terminale</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            color: rgb(63, 39, 39);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h2, h3 {
+            color: #8b1152;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            color: #5b3e52;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .concepts, .example {
+            background-color: #aa7788;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .concepts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .concepts li {
+            margin-bottom: 15px;
+        }
+
+        .concepts li span {
+            color: #874b79;
+            font-weight: bold;
+        }
+
+        .example p {
+            font-size: 18px;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .image-container {
+            background-color: #3c2b34;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #9abcab;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ff00c8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>Les Matrices - Mathématiques Spécialité Terminale</h1>
+        </header>
+
+        <main>
+            <!-- SECTION 1 : CONCEPTS CLÉS -->
+            <section class="concepts">
+                <h2>Concepts Clés</h2>
+                <ul>
+                    <li><span>Définition d'une matrice :</span> Une matrice est un tableau rectangulaire de nombres organisés en lignes et en colonnes. Une matrice \( A \) de taille \( m \times n \) est notée :
+                        <p>
+                        $$ A = \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \dots & a_{mn} \end{pmatrix} $$
+                        </p>
+                    </li>
+                    <li><span>Opérations sur les matrices :</span> Les matrices peuvent être additionnées, soustraites et multipliées entre elles si elles sont de dimensions compatibles. La multiplication d'une matrice par un scalaire est également possible.
+                        <p>
+                        $$ \text{Si } A = \begin{pmatrix} a_{ij} \end{pmatrix}, \quad \text{et} \quad \lambda \text{ un scalaire}, \quad \lambda A = \begin{pmatrix} \lambda a_{ij} \end{pmatrix} $$
+                        </p>
+                    </li>
+                    <li><span>Inversion d'une matrice :</span> Une matrice carrée \( A \) admet une matrice inverse \( A^{-1} \) si et seulement si \( A \) est non singulière, c'est-à-dire si son déterminant est non nul.
+                        <p>
+                        $$ A \times A^{-1} = I $$
+                        </p>
+                        où \( I \) est la matrice identité.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- EXEMPLE 1 -->
+            <section class="example">
+                <h3>Exemple 1 : Addition de matrices</h3>
+                <p>Soit les matrices \( A \) et \( B \) définies par :
+                    <p>
+                    $$ A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} $$
+                    </p>
+                    Calculons \( A + B \).
+                </p>
+                <p>
+                    $$ A + B = \begin{pmatrix} 1+5 & 2+6 \\ 3+7 & 4+8 \end{pmatrix} = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $$
+                </p>
+                <p><strong>Résultat :</strong> La somme des matrices est \( \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} \).</p>
+            </section>
+
+            <!-- EXEMPLE 2 -->
+            <section class="example">
+                <h3>Exemple 2 : Multiplication de matrices</h3>
+                <p>Soit les matrices \( A \) et \( B \) définies par :
+                    <p>
+                    $$ A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} $$
+                    </p>
+                    Calculons \( A \times B \).
+                </p>
+                <p>
+                    $$ A \times B = \begin{pmatrix} 1 \times 5 + 2 \times 7 & 1 \times 6 + 2 \times 8 \\ 3 \times 5 + 4 \times 7 & 3 \times 6 + 4 \times 8 \end{pmatrix} = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix} $$
+                </p>
+                <p><strong>Résultat :</strong> Le produit des matrices est \( \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix} \).</p>
+            </section>
+
+            <!-- EXEMPLE 3 -->
+            <section class="example">
+                <h3>Exemple 3 : Calcul de la matrice inverse</h3>
+                <p>Soit la matrice \( A \) définie par :
+                    <p>
+                    $$ A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} $$
+                    </p>
+                    Calculons l'inverse de \( A \).
+                </p>
+                <p>
+                    Le déterminant de \( A \) est :
+                    $$ \det(A) = 1 \times 4 - 2 \times 3 = -2. $$
+                </p>
+                <p>
+                    L'inverse de \( A \) est donnée par :
+                    $$ A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} = \frac{1}{-2} \begin{pmatrix} 4 & -2 \\ -3 & 1 \end{pmatrix} = \begin{pmatrix} -2 & 1 \\ 1.5 & -0.5 \end{pmatrix} $$
+                </p>
+                <p><strong>Résultat :</strong> L'inverse de la matrice est \( \begin{pmatrix} -2 & 1 \\ 1.5 & -0.5 \end{pmatrix} \).</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Ce cours a été créé pour les étudiants de terminale en spécialité mathématiques.</p>
+            <p>Retour au <a href="index.html">site principal</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        MathJax.typeset();
+    </script>
+</body>
+</html>

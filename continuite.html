@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuité : Notions et Propriétés</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            color: rgb(63, 39, 39);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h2, h3 {
+            color: #8b1152;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            color: #5b3e52;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .concepts, .example {
+            background-color: #aa7788;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .concepts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .concepts li {
+            margin-bottom: 15px;
+        }
+
+        .concepts li span {
+            color: #874b79;
+            font-weight: bold;
+        }
+
+        .example p {
+            font-size: 18px;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .image-container {
+            background-color: #3c2b34;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #9abcab;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ff00c8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>Continuité : Notions et Propriétés</h1>
+        </header>
+
+        <main>
+            <section class="concepts">
+                <h2>1. Notion de continuité</h2>
+                <h3>a. Définition</h3>
+                <p>Une fonction est dite <strong>continue</strong> sur un intervalle \(I\) si sa courbe représentative ne présente aucune rupture (on peut la tracer sans lever le crayon de la feuille).</p>
+                <h3>b. Théorème de continuité</h3>
+                <p>Soit \(f\) une fonction définie sur un intervalle \(I\) et \(a\) un réel appartenant à \(I\) :</p>
+                <p>\[ \lim_{x \to a} f(x) = f(a) \]</p>
+                <h3>c. Propriétés</h3>
+                <ul>
+                    <li>Les fonctions usuelles (affines, carrées, inverses, racines carrées, exponentielles, etc.) sont continues sur leur ensemble de définition.</li>
+                    <li>Une fonction dérivable sur un intervalle \(I\) est continue sur \(I\) ; la réciproque est fausse.</li>
+                </ul>
+            </section>
+
+            <section class="concepts">
+                <h2>2. Théorème des valeurs intermédiaires</h2>
+                <p>Ce théorème permet de déterminer l'existence de solutions d'une équation de la forme \(f(x) = k\) sur un intervalle \([a, b]\) où \(f\) est continue.</p>
+            </section>
+
+            <section class="concepts">
+                <h2>3. Application aux suites</h2>
+                <p>Si \(f\) est continue sur un intervalle \(I\) et si une suite \((u_n)\) converge vers \(L\) alors \(f(u_n)\) converge vers \(f(L)\).</p>
+            </section>
+
+            <section class="example">
+                <h3>Vidéos de Cours et Corrections</h3>
+                <div class="videos-grid">
+                    <!-- Insérer ici les vidéos de cours ou de correction -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Ce cours a été créé pour les étudiants de terminale en mathématiques.</p>
+            <p>Retour au <a href="index.html">site principal</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        MathJax.typeset();
+    </script>
+</body>
+</html>

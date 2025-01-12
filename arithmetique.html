@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmétique - Divisibilité dans Z</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1e1e2f;
+            color: #f0f0f0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #f0a500;
+        }
+
+        h2 {
+            color: #f0a500;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .content {
+            background-color: #2b4d3c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .formula {
+            background-color: #1e2a38;
+            padding: 10px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #f0a500;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .example {
+            background-color: #3e536b;
+            padding: 15px;
+            border-left: 5px solid #f0a500;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .images-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            background-color: #2b4d3c;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 200px;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #9abcab;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Arithmétique - Divisibilité dans Z</h1>
+    </header>
+
+    <section class="content">
+        <h2>Définitions</h2>
+        <p>La divisibilité est une notion fondamentale en arithmétique. On dit qu'un entier <strong>a</strong> divise un entier <strong>b</strong> si et seulement si il existe un entier <strong>k</strong> tel que :</p>
+        <div class="formula">b = a × k</div>
+        <p>Dans ce cas, on note : <strong>a | b</strong>.</p>
+    </section>
+
+    <section class="content">
+        <h2>Propriétés de la divisibilité</h2>
+        <ul>
+            <li>Si <strong>a | b</strong> et <strong>b | c</strong>, alors <strong>a | c</strong> (transitivité).</li>
+            <li>Si <strong>a | b</strong> et <strong>a | c</strong>, alors <strong>a</strong> divise toute combinaison linéaire de <strong>b</strong> et <strong>c</strong>.</li>
+            <li>Tout entier divise 0.</li>
+            <li>1 divise tous les entiers.</li>
+        </ul>
+    </section>
+
+    <section class="content">
+        <h2>Exemple</h2>
+        <div class="example">
+            <p><strong>Exemple 1 :</strong> Montrons que 3 divise 12.</p>
+            <p>On sait que 12 = 3 × 4. Par définition, 3 divise 12, donc on écrit : 3 | 12.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple 2 :</strong> Montrons que 2 divise 14 et 2 divise 8.</p>
+            <p>14 = 2 × 7 et 8 = 2 × 4. Par conséquent, 2 | 14 et 2 | 8.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Correction des Exercices</h2>
+        <div class="images-grid">
+            <div class="image-container">
+                <img src="chemin/vers/image1.jpg" alt="Correction de l'exercice 1">
+                <p>Correction de l'exercice 1</p>
+            </div>
+            <div class="image-container">
+                <img src="chemin/vers/image2.jpg" alt="Correction de l'exercice 2">
+                <p>Correction de l'exercice 2</p>
+            </div>
+            <div class="image-container">
+                <img src="chemin/vers/image3.jpg" alt="Correction de l'exercice 3">
+                <p>Correction de l'exercice 3</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

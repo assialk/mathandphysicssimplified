@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loi binomiale - Mathématiques Spécialité Terminale</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            color: rgb(63, 39, 39);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h2, h3 {
+            color: #8b1152;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            color: #5b3e52;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .concepts, .example {
+            background-color: #aa7788;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .concepts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .concepts li {
+            margin-bottom: 15px;
+        }
+
+        .concepts li span {
+            color: #874b79;
+            font-weight: bold;
+        }
+
+        .example p {
+            font-size: 18px;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .image-container {
+            background-color: #3c2b34;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #9abcab;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #ff00c8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>Loi binomiale - Mathématiques Spécialité Terminale</h1>
+        </header>
+
+        <main>
+            
+            <section class="concepts">
+                <h2>Rappels de 1ere</h2>
+                <h3>1) vocabulaire de base</h3>
+
+                <ul>
+                    <li>Expérience aléatoire : Une expérience dont on ne peut pas prédire le résultat. </li>
+                    <li>Événement : Un sous-ensemble des résultats possibles de l'expérience.</li>   
+                    <li>Événement certain : Se réalise à coup sûr.</li>
+                    <li>Événement impossible : Ne se réalise jamais.</li>
+                    <li>Événements incompatibles : Deux événements ne peuvent pas se produire en même temps.</li>
+                </ul>
+                <h3>2) les probabilités</h3>
+                    <p>Définition : La probabilité d'un événement A est un nombre P(A) tel que :</p>
+                    <p>\[0≤P(A)≤1
+                        \]
+                    </p>
+                    <ul>
+                        <li>P(A)=0 : événement impossible</li>
+                        <li>P(A)=1: événement certain</li>
+                    </ul>
+                    <ul>
+                        <li>Somme des probabilités: La somme des probabilités de tous les évemenents élémentaires de l'univers Ω est égale à 1.</li>
+                        <p>\[
+                            P(Ω) = 1
+                            \]
+                        </p>
+                    </ul>
+                    <h3>3)Les calculs de probalités</h3>
+                    <ul>
+                        <li>évemenents complémentaires:</li>
+                        <p>\[
+                            P(A)=1−P(A)
+                            \]</p>
+                        <li>Union de deux événements:</li>
+                        <p>\[
+                            P(A∪B)=P(A)+P(B)−P(A∩B)
+                            \]
+                        </p>
+                        <li>Intersection de deux évemenents indépendants</li>
+                        <p>\[
+                            P(A∩B)=P(A)×P(B)
+                            \]
+                        </p>
+                    </ul>
+                    <h3>probabilité conditionnelle</h3>
+                    <ul>
+                        <li>Définition: La probalités de A sachant B est donnée par : </li>
+                        <p>\[
+                            P_A​(B)=\frac{P(A∩B)​}{P(B)}
+                            \]
+                        </p>
+                        <li>
+                         où P(B)≠0
+                        </li>
+                    </ul>
+                    <h3>Espérance</h3>
+                    <p>Définition: Pour une variable aléatoire X prenant les valeurs x1,x2,..,xn avec les probabilités respectives p1, p2,...,pn' , l'ésperance E(X) est:</p>
+                    <p>\[
+                        \sum_{i=1}^{n}x_ip_i
+                        \]</p>
+                    <h3>Variance et Ecart-Type</h3>
+                    <ul>
+                    <li>Variance : Mesure de la dispersion des valeurs d'une variable aléatoire autour de son espérance.</li>
+                    <p>\[
+                        \sum_{i=1}^{k}p_i(x_i - (E(X))^2 )
+                        \]</p>
+                    <li>Ecart-Type: La racine carrée de la variance.</li>
+                    <p>\[
+                        σ(X)=\sqrt{V(X)}
+                        \]</p>
+                    </ul>
+                    </section>
+
+                    <section class="concepts">
+                        <h2>Succession de </h2>
+                    </section>
+
+                </main>
+
+                <footer>
+                    <p>Ce cours a été créé pour les étudiants de terminale en spécialité mathématiques.</p>
+                    <p>Retour au <a href="index.html">site principal</a>.</p>
+                </footer>
+            </div>
+        
+    <script>
+        MathJax.typeset();
+    </script>
+ </body>
+ </html>
